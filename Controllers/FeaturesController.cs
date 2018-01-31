@@ -20,7 +20,7 @@ namespace vega.Controllers
         this.context = context;
         }
 
-        [HttpGet("/api/makes")]
+        [HttpGet("/api/features")]
         public async Task<IEnumerable<FeatureResource>> GetMakes()
         {
         var features = await context.Makes.Include(m => m.Models).ToListAsync();
