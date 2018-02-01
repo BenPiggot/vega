@@ -16,16 +16,16 @@ namespace vega.Controllers
 
         public FeaturesController(VegaDbContext context, IMapper mapper)
         {
-        this.mapper = mapper;
-        this.context = context;
+            this.mapper = mapper;
+            this.context = context;
         }
 
         [HttpGet("/api/features")]
         public async Task<IEnumerable<FeatureResource>> GetMakes()
         {
-        var features = await context.Features.ToListAsync();
+            var features = await context.Features.ToListAsync();
 
-        return mapper.Map<List<Feature>, List<FeatureResource>>(features);
+            return mapper.Map<List<Feature>, List<FeatureResource>>(features);
         }  
     }
 }
