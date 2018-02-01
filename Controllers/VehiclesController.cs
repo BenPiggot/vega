@@ -6,7 +6,7 @@ namespace vega.Controllers
     [Route("/api/vehicles")]
     public class VehiclesController : Controller
     {   
-        [HttpPost]
+        [HttpPost("/api/vehicles")]
         public IActionResult CreateVehicle(Vehicle vehicle) 
         {
             return Ok(vehicle);
