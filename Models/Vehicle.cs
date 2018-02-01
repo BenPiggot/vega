@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace vega.Models
 {
-    [Table("Vehicles")]
+    [Table("Tables")]
     public class Vehicle
     {
         public int Id { get; set; }
